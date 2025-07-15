@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    background-color: #121214;
+    color: white;
+}
+
+body *, 
+:root {
+
+    font-family: "inter";
+    line-height: 160%;
+}
+
+header {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+header img {
+    width: 15rem;
+}
+
+main {
+    max-width: 36rem;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+section {
+    background-image: linear-gradient(90deg, #9572FC 0%, #43e7ad 50%, #E2D45C 100%);
+    border-radius: 0.625rem;
+    padding-top: 4px;
+}
+
+section > div {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #2a2634;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #a1a1aa;
+}
+
+main section {
+    opacity: 0;
+    transform: translateY(2rem);
+
+    animation-name: appear;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin: 1.25rem 0;
+}
+
+input, select {
+    all: unset;
+    border: 2px solid #9147ff;
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    font-size: 0.875rem;
+    background-color: #00000066;
+}
+
+input {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(245deg, #9572FC 0%, #43e7ad 50%, #E2D45C 100%);
+    padding: 0.675rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12px;
+
+    transition: all 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+    transition: initial;
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+    color: black;
+}
+
+#aiResponse {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 0.5rem;
+    border-left: 3px solid #43e7ad;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(67, 231, 173, 0.3);
+}
+
+#aiResponse ul {
+    padding-left: 1.5rem;
+    opacity: 0.8;
+}
+
+#aiResponse p {
+    color: white !important
+}
+
+.loading {
+    animation: pulse 1s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+input:focus,
+select:focus {
+  border-color: #43e7ad;
+  box-shadow: 0 0 8px #43e7ad;
+}
+
+/* VALORANT */
+.valorant-theme {
+  background-color: #0f1923;
+  color: #ffffff;
+  background-image: none;
+}
+
+.valorant-theme input,
+.valorant-theme select {
+  border-color: #ff4655;
+  background-color: rgba(255, 70, 85, 0.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.valorant-theme select option {
+  background-color: #0f1923;
+  color: #fff;
+}
+
+.valorant-theme button {
+  background-image: linear-gradient(228deg, #f85f6c, #bd3944);
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.valorant-theme #aiResponse {
+  background-color: rgba(15, 25, 35, 0.85);
+  border-left: 4px solid #ff4655;
+  box-shadow: 0 0 10px rgba(255, 70, 85, 0.4);
+}
+
+
+/* LEAGUE OF LEGENDS */
+.lol-theme {
+  background-color: #1e1b2e;
+  color: #f5f5f5;
+  background-image: radial-gradient(circle at top left, #2a2139, #1e1b2e);
+}
+
+.lol-theme input,
+.lol-theme select {
+  border-color: #7f5af0;
+  background-color: rgba(255, 255, 255, 0.05); /* fundo transparente escuro */
+  color: #f5f5f5;
+  cursor: pointer;
+}
+
+/* Ajuste para o select manter visual escuro, texto claro e cursor */
+.lol-theme select {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f5f5f5;
+  border-color: #7f5af0;
+  cursor: pointer;
+}
+
+/* Evita que o placeholder do select fique branco */
+.lol-theme select option {
+  background-color: #1e1b2e;
+  color: #f5f5f5;
+}
+
+.lol-theme button {
+  background-image: linear-gradient(135deg, #ff7eb9, #7f5af0);
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.lol-theme #aiResponse {
+  background-color: rgba(36, 28, 58, 0.9);
+  border-left: 4px solid #ff7eb9;
+  box-shadow: 0 0 12px rgba(255, 126, 185, 0.3);
+}
+
+
+/* CS:GO */
+.csgo-theme {
+  background-color: #1b1b1b;
+  color: #f1c40f;
+  background-image: none;
+}
+
+.csgo-theme h2 {
+  color: white;
+}
+
+.csgo-theme input,
+.csgo-theme select {
+  border-color: #f39c12;
+  background-color: rgba(243, 156, 18, 0.1);
+  color: #fff;
+  cursor: pointer;
+}
+
+.csgo-theme select option {
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.csgo-theme button {
+  background-image: linear-gradient(245deg, #f39c12, #d35400);
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.csgo-theme #aiResponse {
+  color: white !important;
+}
