@@ -37,13 +37,13 @@ Acesse: https://makersuite.google.com/app/apikey
 ## 💡 Exemplo de perguntas por jogo
 
 Valorant
-🗨️ “Qual agente é melhor para o mapa Ascent?”
+🗨️ “No Valorant, como defender o spike no mapa Bind?”
 
 League of Legends
-🗨️ “Qual é a build ideal para Lee Sin jungle?”
+🗨️ "Quais campeões estão fortes no LoL atualmente?"
 
 CS:GO
-🗨️ “Qual é a melhor estratégia para CT no mapa Inferno?”
+🗨️ "No CS:GO, qual é a melhor estratégia para o mapa Mirage?"
 
 
 
